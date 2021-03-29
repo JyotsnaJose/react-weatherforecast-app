@@ -7,7 +7,7 @@ export default function Weather() {
         <form className="input-group">
           <input
             type="search"
-            class="form-control"
+            className="form-control"
             placeholder="Search a city.."
           />
           <input type="submit" value="Search" />

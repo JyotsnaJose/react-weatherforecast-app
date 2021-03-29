@@ -6,6 +6,7 @@ export default function Footer() {
       <a
         href="https://github.com/JyotsnaJose/react-weatherforecast-app"
         target="_blank"
+        rel="noreferrer"
       >
         Open-cource code
       </a>{" "}
