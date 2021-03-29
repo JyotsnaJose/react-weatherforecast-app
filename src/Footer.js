@@ -10,7 +10,7 @@ export default function Footer() {
       >
         Open-cource code
       </a>{" "}
-      by Jyotnsa Jose
+      by Jyotsna Jose
     </small>
   );
 }
