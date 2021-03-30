@@ -15,7 +15,7 @@
 .Weather .current-weather {
   padding: 5% 0;
 }
-.Weather .temperature {
+.Weather .display-temperature {
   text-align: center;
 }
 .Weather .description {
