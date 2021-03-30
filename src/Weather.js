@@ -16,15 +16,17 @@ export default function Weather() {
       </section>
       <section>
         <h1>Minnesota</h1>
-        <h6>Feb 28 2021, Sunday, 15:11 CST</h6>
-        <h6>Clear Sky</h6>
+        <h6 className="date">Feb 28 2021, Sunday, 15:11 CST</h6>
       </section>
-      <section>
+      <section className="current-weather">
         <div className="row">
           <div className="col-6">
-            <img src="" alt="icon"></img>
-            <h4>2 ºC </h4>
-            <small>Feels like -3º</small>
+            <div className="temperature">
+              <h4>2 ºC</h4>
+              <small>Feels like -3º</small>
+            </div>
+            <img src="" alt="icon" className="weather-icon"></img>
+            <h6 className="description">Clear Sky</h6>
           </div>
           <div className="col-6">
             <ul>

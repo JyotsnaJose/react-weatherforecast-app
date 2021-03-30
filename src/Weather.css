@@ -1,3 +1,23 @@
 .Weather {
-  background: #365939;
+  border-style: groove;
+  padding: 25px 20px 0 20px;
+}
+.Weather li {
+  list-style: none;
+}
+.Weather h1 {
+  padding-top: 10px;
+  text-align: center;
+}
+.Weather .date {
+  text-align: center;
+}
+.Weather .current-weather {
+  padding: 5% 0;
+}
+.Weather .temperature {
+  text-align: center;
+}
+.Weather .description {
+  display: inline;
 }
