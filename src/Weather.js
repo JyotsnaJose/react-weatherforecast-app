@@ -23,13 +23,26 @@ export default function Weather(props) {
     return (
       <div className="Weather">
         <section className="searchCity">
-          <form className="input-group">
+          <form className="searchCity input-group">
             <input
               type="search"
-              className="form-control"
+              className="form-control search-input"
               placeholder="Search a city.."
             />
-            <input type="submit" value="Search" />
+            <button class="btn searchButtons" type="submit" id="search-button">
+              <img
+                src="../images/search.png"
+                alt="search"
+                className="button-icon"
+              />
+            </button>
+            <button class="btn searchButtons" type="submit" id="search-button">
+              <img
+                src="../images/location.png"
+                alt="location"
+                className="button-icon"
+              />
+            </button>
           </form>
         </section>
         <section>

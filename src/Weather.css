@@ -2,6 +2,20 @@
   border-style: groove;
   padding: 25px 20px 0 20px;
 }
+.Weather .searchCity {
+  max-width: 500px;
+  border-radius: 9px;
+}
+.Weather .search-input {
+  background-color: #f5c3b2;
+}
+.Weather .button-icon {
+  height: 25px;
+  width: 25px;
+}
+.Weather .searchButtons {
+  background-color: #df4e1d;
+}
 .Weather li {
   list-style: none;
 }
