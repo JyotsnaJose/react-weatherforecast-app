@@ -29,16 +29,23 @@
   border: none;
   border-radius: 0 4px 4px 0;
 }
-.Weather .date {
+.WeatherInfo .date {
   text-align: center;
 }
-.Weather .current-weather {
+.WeatherInfo .current-weather {
   padding: 5% 0;
 }
-.Weather .display-temperature {
+.WeatherInfo .display-temperature {
   text-align: center;
 }
-.Weather .description {
-  display: block;
+.WeatherInfo .description {
+  display: inline;
   text-align: center;
+}
+.WeatherInfo canvas {
+  width: 60px;
+  height: 60px;
+}
+.WeatherInfo .icon-description {
+  margin-left: 17px;
 }

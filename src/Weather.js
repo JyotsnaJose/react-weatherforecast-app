@@ -19,6 +19,7 @@ export default function Weather(props) {
       windSpeed: Math.round(response.data.wind.speed),
       date: response.data.dt * 1000,
       cityName: response.data.name,
+      icon: response.data.weather[0].icon,
     });
   }
   function handleCityInput(event) {
@@ -58,7 +59,7 @@ export default function Weather(props) {
               />
             </button>
             <button
-              className="btn  locationButton"
+              className="btn locationButton"
               type="submit"
               id="search-button"
             >
