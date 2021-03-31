@@ -29,14 +29,22 @@ export default function Weather(props) {
               className="form-control search-input"
               placeholder="Search a city.."
             />
-            <button class="btn searchButtons" type="submit" id="search-button">
+            <button
+              class="btn btn-outline-secondary searchButtons"
+              type="submit"
+              id="search-button"
+            >
               <img
                 src="../images/search.png"
                 alt="search"
                 className="button-icon"
               />
             </button>
-            <button class="btn searchButtons" type="submit" id="search-button">
+            <button
+              class="btn btn-outline-secondary searchButtons"
+              type="submit"
+              id="search-button"
+            >
               <img
                 src="../images/location.png"
                 alt="location"
