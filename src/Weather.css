@@ -19,5 +19,6 @@
   text-align: center;
 }
 .Weather .description {
-  display: inline;
+  display: block;
+  text-align: center;
 }

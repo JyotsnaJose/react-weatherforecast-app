@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Loader from "react-loader-spinner";
 import "./Weather.css";
 
 export default function Weather(props) {
+  let city = props.defaultCity;
   const [weather, setWeather] = useState({ ready: false });
   function handleResponse(response) {
     setWeather({
@@ -13,7 +15,7 @@ export default function Weather(props) {
       tempMax: Math.round(response.data.main.temp_max),
       tempMin: Math.round(response.data.main.temp_min),
       humidity: response.data.main.humidity,
-      windSpeed: response.data.wind.speed,
+      windSpeed: Math.round(response.data.wind.speed),
     });
   }
 
@@ -31,7 +33,7 @@ export default function Weather(props) {
           </form>
         </section>
         <section>
-          <h1>Minnesota</h1>
+          <h1>{city}</h1>
           <h6 className="date">Feb 28 2021, Sunday, 15:11 CST</h6>
         </section>
         <section className="current-weather">
@@ -39,12 +41,12 @@ export default function Weather(props) {
             <div className="col-6">
               <div className="display-temperature">
                 <h4>{weather.temperature} ºC</h4>
-                <small>Feels like {weather.feelslike}º</small>
+                <span>Feels like {weather.feelslike}º</span>
+                {/* <img src="" alt="icon" className="weather-icon"></img> */}
+                <span className="description text-capitalize">
+                  {weather.description}
+                </span>
               </div>
-              {/* <img src="" alt="icon" className="weather-icon"></img> */}
-              <h6 className="description text-capitalize">
-                {weather.description}
-              </h6>
             </div>
             <div className="col-6">
               <ul>
@@ -64,6 +66,8 @@ export default function Weather(props) {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=${unit}`;
     axios.get(apiUrl).then(handleResponse);
 
-    return <h1>Loading...</h1>;
+    return (
+      <Loader type="BallTriangle" color="#00BFFF" height={80} width={80} />
+    );
   }
 }
