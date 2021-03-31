@@ -5,7 +5,7 @@ import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
-  let city = props.defaultCity;
+  const [city, setCity] = useState(props.defaultCity);
   const [weather, setWeather] = useState({ ready: false });
   function handleResponse(response) {
     setWeather({
@@ -21,19 +21,33 @@ export default function Weather(props) {
       cityName: response.data.name,
     });
   }
+  function handleCityInput(event) {
+    setCity(event.target.value);
+  }
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+  function search() {
+    const apiKey = "77284b6440cc462afb48cef654bc731c";
+    const unit = "metric";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
 
   if (weather.ready) {
     return (
       <div className="Weather">
         <section className="searchCity">
-          <form className="searchCity input-group">
+          <form className="searchCity input-group" onSubmit={handleSubmit}>
             <input
               type="search"
               className="form-control search-input"
               placeholder="Search a city.."
+              onChange={handleCityInput}
             />
             <button
-              className="btn btn-outline-secondary searchButtons"
+              className="btn rounded-0 searchButton"
               type="submit"
               id="search-button"
             >
@@ -44,7 +58,7 @@ export default function Weather(props) {
               />
             </button>
             <button
-              className="btn btn-outline-secondary searchButtons"
+              className="btn  locationButton"
               type="submit"
               id="search-button"
             >
@@ -60,11 +74,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    const apiKey = "77284b6440cc462afb48cef654bc731c";
-    const unit = "metric";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
-    axios.get(apiUrl).then(handleResponse);
-
+    search();
     return (
       <Loader type="BallTriangle" color="#00BFFF" height={80} width={80} />
     );
