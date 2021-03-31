@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Loader from "react-loader-spinner";
+import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -16,6 +17,7 @@ export default function Weather(props) {
       tempMin: Math.round(response.data.main.temp_min),
       humidity: response.data.main.humidity,
       windSpeed: Math.round(response.data.wind.speed),
+      date: response.data.dt * 1000,
     });
   }
 
@@ -55,7 +57,9 @@ export default function Weather(props) {
         </section>
         <section>
           <h1>{city}</h1>
-          <h6 className="date">Feb 28 2021, Sunday, 15:11 CST</h6>
+          <h6 className="date">
+            <FormattedDate date={weather.date} />
+          </h6>
         </section>
         <section className="current-weather">
           <div className="row">
