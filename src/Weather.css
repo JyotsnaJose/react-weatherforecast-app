@@ -14,7 +14,7 @@
   border-radius: 9px;
 }
 .Weather .search-input {
-  background-color: #f5c3b2;
+  background-color: rgb(245, 195, 178, 0.6);
 }
 .Weather .button-icon {
   height: 25px;
