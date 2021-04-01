@@ -18,7 +18,7 @@ export default function WeatherInfo(props) {
               <h4>{props.data.temperature} ºC</h4>
               <span>Feels like {props.data.feelslike}º</span>
             </div>
-            <div className="icon-description">
+            <div className="icon-description clearfix">
               <WeatherIcons icon={props.data.icon} />
               <span className="description text-capitalize">
                 {props.data.description}
