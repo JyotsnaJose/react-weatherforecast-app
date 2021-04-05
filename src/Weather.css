@@ -11,8 +11,8 @@
   font-size: 35px;
 }
 .Weather .searchCity {
-  max-width: 500px;
-  width: 80%;
+  max-width: 700px;
+  width: 90%;
   border-radius: 9px;
 }
 .Weather .search-input {
@@ -31,6 +31,9 @@
   border: none;
   border-radius: 0 4px 4px 0;
 }
+.WeatherInfo h1 {
+  font-size: 32px;
+}
 .WeatherInfo .date {
   text-align: center;
 }
@@ -40,21 +43,13 @@
 .WeatherInfo .display-temperature {
   text-align: center;
 }
-.WeatherInfo .description {
-  margin: 6px;
-}
 .WeatherInfo canvas {
   width: 60px;
   height: 60px;
-  float: left;
-}
-.WeatherInfo .icon-description {
-  margin-left: 17px;
-  margin-top: 20px;
 }
 .WeatherInfo .temperature {
-  font-size: 50px;
+  font-size: 40px;
 }
-.WeatherInfo .degree-conversion {
+.WeatherInfo .units {
   font-size: 20px;
 }

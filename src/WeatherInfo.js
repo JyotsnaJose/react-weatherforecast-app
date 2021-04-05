@@ -16,20 +16,23 @@ export default function WeatherInfo(props) {
         <div className="row">
           <div className="col-6">
             <div className="display-temperature">
-              <WeatherTemp temp={props.data.temperature} />
-              <span>Feels like {props.data.feelslike}º</span>
-            </div>
-            <div className="icon-description clearfix">
-              <WeatherIcons icon={props.data.icon} />
-              <span className="description text-capitalize">
-                {props.data.description}
-              </span>
+              <WeatherTemp
+                temp={props.data.temperature}
+                feels={props.data.feelslike}
+              />
+              {/* <span>Feels like {props.data.feelslike}º</span> */}
             </div>
           </div>
           <div className="col-6">
             <ul>
-              <li>High : {props.data.tempMax}º</li>
-              <li>Low : {props.data.tempMin}º</li>
+              <li>
+                <WeatherIcons icon={props.data.icon} />
+              </li>
+              <li>
+                <span className="description text-capitalize">
+                  {props.data.description}
+                </span>
+              </li>
               <li>Humidity : {props.data.humidity}%</li>
               <li>Wind : {props.data.windSpeed}m/s</li>
             </ul>

@@ -15,9 +15,9 @@ export default function WeatherTemp(props) {
   if (unit === "Celsius") {
     return (
       <div className="WeatherTemp">
-        <h4>
+        <h4 className="temperature">
           {props.temp}º{" "}
-          <small>
+          <small className="units">
             C |
             <a href="/" onClick={convertToFahrenheit}>
               {" "}
@@ -25,20 +25,22 @@ export default function WeatherTemp(props) {
             </a>
           </small>
         </h4>
+        <span>Feels like {props.feels}ºC</span>
       </div>
     );
   } else {
     return (
       <div className="WeatherTemp">
-        <h4>
-          {(props.temp * 9) / 5 + 32}º{" "}
-          <small>
+        <h4 className="temperature">
+          {Math.round((props.temp * 9) / 5 + 32)}º{" "}
+          <small className="units">
             <a href="/" onClick={convertToCelsius}>
               C
             </a>{" "}
             | F
           </small>
         </h4>
+        <span>Feels like {Math.round((props.feels * 9) / 5 + 32)}ºF</span>
       </div>
     );
   }

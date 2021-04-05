@@ -13,8 +13,6 @@ export default function Weather(props) {
       temperature: Math.round(response.data.main.temp),
       feelslike: Math.round(response.data.main.feels_like),
       description: response.data.weather[0].description,
-      tempMax: Math.round(response.data.main.temp_max),
-      tempMin: Math.round(response.data.main.temp_min),
       humidity: response.data.main.humidity,
       windSpeed: Math.round(response.data.wind.speed),
       date: response.data.dt * 1000,
@@ -52,22 +50,9 @@ export default function Weather(props) {
               type="submit"
               id="search-button"
             >
-              <img
-                src="../images/search.png"
-                alt="search"
-                className="button-icon"
-              />
-            </button>
-            <button
-              className="btn locationButton"
-              type="submit"
-              id="search-button"
-            >
-              <img
-                src="../images/location.png"
-                alt="location"
-                className="button-icon"
-              />
+              {" "}
+              🔍Search
+              {/* <img src="./search.png" alt="Search" className="button-icon" /> */}
             </button>
           </form>
         </section>
