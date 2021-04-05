@@ -1,0 +1,9 @@
+.WeatherForecast {
+  text-align: center;
+}
+.WeatherForecast .WeatherForecast-day {
+  margin-bottom: 7px;
+}
+.WeatherForecast .WeatherForecast-Temperature {
+  font-size: 14px;
+}
