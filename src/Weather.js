@@ -42,7 +42,7 @@ export default function Weather(props) {
             <input
               type="search"
               className="form-control search-input"
-              placeholder="Search a city.."
+              placeholder="Type a city.."
               onChange={handleCityInput}
             />
             <button
