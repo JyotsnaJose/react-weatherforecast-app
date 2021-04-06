@@ -53,9 +53,20 @@ export default function Weather(props) {
               id="search-button"
             >
               {" "}
-              {/* 🔍Search */}
               <img
                 src="../images/search.png"
+                alt="Search"
+                className="button-icon"
+              />
+            </button>
+            <button
+              className="btn locationButton"
+              type="button"
+              id="location-button"
+            >
+              {" "}
+              <img
+                src="../images/location.png"
                 alt="Search"
                 className="button-icon"
               />

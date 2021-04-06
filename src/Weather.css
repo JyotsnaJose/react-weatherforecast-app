@@ -1,6 +1,9 @@
 .Weather {
-  border-style: groove;
+  border-style: solid;
   padding: 25px 20px 10px 20px;
+  border-radius: 5px;
+  border-color: #df4e1d;
+  box-shadow: 2px 2px 4px rgb(46, 45, 45), -2px -2px 4px rgb(46, 45, 45);
 }
 .Weather li {
   list-style: none;
@@ -25,7 +28,7 @@
 .Weather .searchButton {
   background-color: #df4e1d;
   border: none;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0;
 }
 .Weather .locationButton {
   background-color: #df4e1d;
