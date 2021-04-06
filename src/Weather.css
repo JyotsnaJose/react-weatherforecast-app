@@ -30,10 +30,18 @@
   border: none;
   border-radius: 0;
 }
+.Weather .searchButton:hover {
+  background-color: #ca471c;
+  border: thick;
+}
 .Weather .locationButton {
   background-color: #df4e1d;
   border: none;
   border-radius: 0 4px 4px 0;
+}
+.Weather .locationButton:hover {
+  background-color: #ca471c;
+  border: thick;
 }
 .WeatherInfo h1 {
   font-size: 32px;
