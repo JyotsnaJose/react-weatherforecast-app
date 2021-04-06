@@ -4,7 +4,6 @@ export default function WeatherTemp(props) {
   const [unit, setUnit] = useState("Celsius");
 
   function convertToFahrenheit(event) {
-    console.log("hello");
     event.preventDefault();
     setUnit("Fahrenheit");
   }

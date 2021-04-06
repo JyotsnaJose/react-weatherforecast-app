@@ -9,7 +9,6 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weather, setWeather] = useState({ ready: false });
   function handleResponse(response) {
-    // console.log(response.data);
     setWeather({
       ready: true,
       coordinates: response.data.coord,
@@ -49,13 +48,17 @@ export default function Weather(props) {
               onChange={handleCityInput}
             />
             <button
-              className="btn rounded-0 searchButton"
+              className="btn searchButton"
               type="submit"
               id="search-button"
             >
               {" "}
-              🔍Search
-              {/* <img src="./search.png" alt="Search" className="button-icon" /> */}
+              {/* 🔍Search */}
+              <img
+                src="../images/search.png"
+                alt="Search"
+                className="button-icon"
+              />
             </button>
           </form>
         </section>

@@ -25,6 +25,7 @@
 .Weather .searchButton {
   background-color: #df4e1d;
   border: none;
+  border-radius: 0 4px 4px 0;
 }
 .Weather .locationButton {
   background-color: #df4e1d;

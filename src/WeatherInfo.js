@@ -20,7 +20,6 @@ export default function WeatherInfo(props) {
                 temp={props.data.temperature}
                 feels={props.data.feelslike}
               />
-              {/* <span>Feels like {props.data.feelslike}º</span> */}
             </div>
           </div>
           <div className="col-6">
