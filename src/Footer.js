@@ -21,7 +21,7 @@ export default function Footer() {
       </a>{" "}
       and hosted on{" "}
       <a
-        href="https://frosty-wozniak-f227cb.netlify.app"
+        href="https://weather-react-jyotsna.netlify.app"
         target="_blank"
         rel="noreferrer"
       >
