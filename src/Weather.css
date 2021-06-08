@@ -2,7 +2,7 @@
   border-style: solid;
   padding: 25px 20px 10px 20px;
   border-radius: 5px;
-  border-color: #df4e1d;
+  border-color: #40916c;
   box-shadow: 2px 2px 4px rgb(46, 45, 45), -2px -2px 4px rgb(46, 45, 45);
 }
 .Weather li {
@@ -19,28 +19,29 @@
   border-radius: 9px;
 }
 .Weather .search-input {
-  background-color: rgb(245, 195, 178, 0.6);
+  background-color: rgba(114, 165, 144, 0.6);
+  border-color: #316e53;
 }
 .Weather .button-icon {
   height: 25px;
   width: 25px;
 }
 .Weather .searchButton {
-  background-color: #df4e1d;
+  background-color: #316e53;
   border: none;
   border-radius: 0;
 }
 .Weather .searchButton:hover {
-  background-color: #ca471c;
+  background-color: #397e5f;
   border: thick;
 }
 .Weather .locationButton {
-  background-color: #df4e1d;
+  background-color: #316e53;
   border: none;
   border-radius: 0 4px 4px 0;
 }
 .Weather .locationButton:hover {
-  background-color: #ca471c;
+  background-color: #397e5f;
   border: thick;
 }
 .WeatherInfo h1 {
@@ -60,7 +61,7 @@
   height: 60px;
 }
 .WeatherInfo .temperature {
-  font-size: 40px;
+  font-size: 50px;
 }
 .WeatherInfo .units {
   font-size: 20px;
